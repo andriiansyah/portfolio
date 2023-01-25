@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap');
+
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.size-fa {
+  font-size: 30px;
+}
+
+/* Navbar Start */
+.navbarr {
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #ff0000;
+}
+
+.navbarr a {
+  text-decoration: none;
+}
+
+.navbarr .container-fluid .navbarr-logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbarr .container-fluid .navbarr-logo span {
+  color: blue;
+}
+
+.navbarr .navbarr-nav a {
+  color: #fff;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.navbarr .navbarr-nav a:hover {
+  color: blue;
+}
+
+.navbarr .navbarr-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid blue;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbarr .navbarr-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbarr-extra {
+  display: none;
+}
+
+.navbarr .navbarr-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbarr .navbarr-extra a:hover {
+  color: blue;
+}
+
+/* Navbar End */
+
+/* Hero Start */
+.hero {
+  height: 100vh;
+}
+
+.hero .icon-fa-size {
+  font-size: 24px;
+}
+/* Hero End */
+
+/* About Start */
+.line-title::before {
+  content: "";
+  width: 12px;
+  height: 4px;
+  background: blue;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.line-title::after {
+  content: "";
+  width: 72px;
+  height: 4px;
+  background: #ff032d;
+  position: absolute;
+  bottom: -5px;
+  left: 18px;
+}
+
+.line-education::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff0000;
+}
+.line-education::after {
+  content: '';
+  /* display: block; */
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 2px;
+  height: 80px;
+  background-color: #ff0000;
+}
+
+.line-experience::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff0000;
+}
+.line-experience::after {
+  content: '';
+  /* display: block; */
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 2px;
+  height: 150px;
+  background-color: #ff0000;
+}
+/* About End */
+
+/* Portfolio Start */
+.img-hover-zoom {
+  cursor: pointer;
+  transition: transform .5s ease;
+}
+.img-hover-zoom:hover {
+  transform: scale(1.5);
+}
+/* Portfolio End */
+
+
+/* Media Query */
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+  /* Hero Start */
+  .hero {
+    height: auto;
+    padding-top: 110px;
+  }
+
+  /* Hero End */
+}
+
+@media (max-width: 768px) {
+  .navbarr-extra {
+    display: inline-block;
+  }
+
+  .navbarr .navbarr-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 16rem;
+    height: 100vh;
+    transition: .3s;
+  }
+
+  .navbarr .navbarr-nav.active {
+    right: 0;
+  }
+
+  .navbarr .navbarr-nav a {
+    color: black;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .navbarr .navbarr-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbarr .navbarr-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .line-education::after {
+    height: 120px;
+  }
+  .line-experience::after {
+    height: 160px;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .line-education::after {
+    height: 80px;
+  }
+  .line-experience::after {
+    height: 150px;
+  }
+}
